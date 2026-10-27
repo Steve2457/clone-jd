@@ -1,0 +1,39 @@
+{
+  "name": "jd-local-mall",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0 <23"
+  },
+  "scripts": {
+    "dev": "tsx watch server/index.ts --dev",
+    "build": "tsc --noEmit && vite build",
+    "start": "node --import tsx server/index.ts",
+    "db:init": "tsx server/cli.ts init",
+    "db:reset": "tsx server/cli.ts reset",
+    "db:check": "tsx server/cli.ts check",
+    "test": "tsx --test tests/*.test.ts",
+    "verify": "npm run build && npm test && npm run db:check",
+    "assets:packs": "node scripts/prepare-packs.mjs",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"server/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.mjs\" package.json tsconfig.json vite.config.ts"
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "lucide-react": "0.468.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-router-dom": "7.18.4"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/node": "22.18.12",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.4",
+    "prettier": "3.6.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vite": "7.3.7"
+  }
+}

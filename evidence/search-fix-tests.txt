@@ -1,0 +1,174 @@
+
+> jd-local-mall@1.0.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# (node:39524) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 独立金额样例：9903分减500，按最大余数分摊167/333，无运费
+ok 1 - 独立金额样例：9903分减500，按最大余数分摊167/333，无运费
+  ---
+  duration_ms: 87.8154
+  type: 'test'
+  ...
+# Subtest: 59元免基础运费按优惠后金额；包邮、区域重量向上取整
+ok 2 - 59元免基础运费按优惠后金额；包邮、区域重量向上取整
+  ---
+  duration_ms: 84.4062
+  type: 'test'
+  ...
+# Subtest: 优惠券资格：门槛、归属、店铺、品类、过期、重复领取
+ok 3 - 优惠券资格：门槛、归属、店铺、品类、过期、重复领取
+  ---
+  duration_ms: 89.7458
+  type: 'test'
+  ...
+# Subtest: 多商家拆单、取消后合并实付重新计算；订单地址为快照
+ok 4 - 多商家拆单、取消后合并实付重新计算；订单地址为快照
+  ---
+  duration_ms: 121.0756
+  type: 'test'
+  ...
+# Subtest: 下单事务保留库存并移除购物车；锁券、取消、幂等键冲突
+ok 5 - 下单事务保留库存并移除购物车；锁券、取消、幂等键冲突
+  ---
+  duration_ms: 130.4759
+  type: 'test'
+  ...
+# Subtest: 报价变化、同券跨店铺、非法商品项均无部分写入
+ok 6 - 报价变化、同券跨店铺、非法商品项均无部分写入
+  ---
+  duration_ms: 84.3705
+  type: 'test'
+  ...
+# Subtest: 最后一件库存竞争，失败请求没有半成品订单
+ok 7 - 最后一件库存竞争，失败请求没有半成品订单
+  ---
+  duration_ms: 122.9583
+  type: 'test'
+  ...
+# Subtest: 游客购物车合并，两个账号地址和购物车隔离
+ok 8 - 游客购物车合并，两个账号地址和购物车隔离
+  ---
+  duration_ms: 82.6862
+  type: 'test'
+  ...
+# Subtest: 支付失败可重试，重复成功支付不生成第二笔扣款
+ok 9 - 支付失败可重试，重复成功支付不生成第二笔扣款
+  ---
+  duration_ms: 121.3496
+  type: 'test'
+  ...
+# Subtest: 已支付未发货取消全额退款；已关闭支付不能假成功
+ok 10 - 已支付未发货取消全额退款；已关闭支付不能假成功
+  ---
+  duration_ms: 123.9676
+  type: 'test'
+  ...
+# Subtest: 暂停自动模拟仍处理30分钟付款超时并释放券和库存
+ok 11 - 暂停自动模拟仍处理30分钟付款超时并释放券和库存
+  ---
+  duration_ms: 122.7563
+  type: 'test'
+  ...
+# Subtest: 非法状态和越权拦截：发货后取消、未送达收货、越权推进
+ok 12 - 非法状态和越权拦截：发货后取消、未送达收货、越权推进
+  ---
+  duration_ms: 125.3096
+  type: 'test'
+  ...
+# Subtest: 评价仅购买者收货后每个订单项一次，评分与记录一致
+ok 13 - 评价仅购买者收货后每个订单项一次，评分与记录一致
+  ---
+  duration_ms: 128.3347
+  type: 'test'
+  ...
+# Subtest: 三次部分退款覆盖分币余数，商品全退返券，退款不能超额
+ok 14 - 三次部分退款覆盖分币余数，商品全退返券，退款不能超额
+  ---
+  duration_ms: 208.5323
+  type: 'test'
+  ...
+# Subtest: 收货后退款不退原运费，撤销售后允许重提且不恢复库存
+ok 15 - 收货后退款不退原运费，撤销售后允许重提且不恢复库存
+  ---
+  duration_ms: 125.2516
+  type: 'test'
+  ...
+# Subtest: 7天窗口、不可退商品和未批准寄回均明确失败
+ok 16 - 7天窗口、不可退商品和未批准寄回均明确失败
+  ---
+  duration_ms: 93.6158
+  type: 'test'
+  ...
+# Subtest: 进程重启后持久任务继续；暂停不会推进发货
+ok 17 - 进程重启后持久任务继续；暂停不会推进发货
+  ---
+  duration_ms: 235.7348
+  type: 'test'
+  ...
+# Subtest: 搜索组合筛选、分页、转义通配符和金额排序
+ok 18 - 搜索组合筛选、分页、转义通配符和金额排序
+  ---
+  duration_ms: 82.8887
+  type: 'test'
+  ...
+# Subtest: 固定种子重复生成规范状态一致，校验器能发现库存破坏
+ok 19 - 固定种子重复生成规范状态一致，校验器能发现库存破坏
+  ---
+  duration_ms: 1538.6395
+  type: 'test'
+  ...
+# Subtest: CLI连续重置先备份，恢复同一规范状态并清除会话与额外任务
+ok 20 - CLI连续重置先备份，恢复同一规范状态并清除会话与额外任务
+  ---
+  duration_ms: 3694.7121
+  type: 'test'
+  ...
+# Subtest: HTTP集成：Cookie轮换/合并/隔离、注册登录、越权、防跨站、并发最后库存
+ok 21 - HTTP集成：Cookie轮换/合并/隔离、注册登录、越权、防跨站、并发最后库存
+  ---
+  duration_ms: 368.102
+  type: 'test'
+  ...
+# (node:57028) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 手机搜索只返回13款整机，短标题机型不丢失，功能提及不冒充整机
+ok 22 - 手机搜索只返回13款整机，短标题机型不丢失，功能提及不冒充整机
+  ---
+  duration_ms: 655.6832
+  type: 'test'
+  ...
+# Subtest: 品牌加手机支持有无空格，型号别名召回，配件仍可独立搜索
+ok 23 - 品牌加手机支持有无空格，型号别名召回，配件仍可独立搜索
+  ---
+  duration_ms: 618.037
+  type: 'test'
+  ...
+# Subtest: 手机筛选排序分页使用同一匹配集合，品牌选项只来自搜索结果
+ok 24 - 手机筛选排序分页使用同一匹配集合，品牌选项只来自搜索结果
+  ---
+  duration_ms: 662.0477
+  type: 'test'
+  ...
+# Subtest: 综合排序优先标题/品牌相关性，不受首页推荐位置支配
+ok 25 - 综合排序优先标题/品牌相关性，不受首页推荐位置支配
+  ---
+  duration_ms: 633.673
+  type: 'test'
+  ...
+# Subtest: 现有数据库原位补齐搜索索引且重启幂等，不重置交易资料
+ok 26 - 现有数据库原位补齐搜索索引且重启幂等，不重置交易资料
+  ---
+  duration_ms: 699.8078
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8251.5652

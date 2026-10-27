@@ -1,0 +1,166 @@
+[
+  {
+    "url": "http://localhost:3000/",
+    "type": "Document"
+  },
+  {
+    "url": "http://localhost:3000/assets/index-D9Q907w7.js",
+    "type": "Script"
+  },
+  {
+    "url": "http://localhost:3000/assets/index-B3Ronb3D.css",
+    "type": "Stylesheet"
+  },
+  {
+    "url": "http://localhost:3000/api/v1/products?featured=1&limit=40",
+    "type": "Fetch"
+  },
+  {
+    "url": "http://localhost:3000/api/v1/bootstrap",
+    "type": "Fetch"
+  },
+  {
+    "url": "http://localhost:3000/favicon.ico",
+    "type": "Other"
+  },
+  {
+    "url": "http://localhost:3000/assets/05e4a8c06a561dd5.png",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/cdc4006d6a1996fe.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/2af99dd905a69643.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/6e7f0218c8400a75.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/484694e4e36fd282.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/d3d1addba44ba1c3.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/9327c265007dff23.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/0112750726ea2750.png",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/48095bc687cf9fd5.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/b90a0715be29b6e8.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/364e7fc97e7182fa.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/e5d82f2d0df61226.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/224d9263286cbadd.png",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/9bf74fc0d4cbbf14.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/e43bece40cbc03f8.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/7f197ef8659c48f6.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/75fc181c7a025ed1.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/38019b1583af3f6b.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/bb005053802dd660.png",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/78336fab615324ce.png",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/d206eabb557f0d09.png",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/ebde97dbfd833150.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/83c6c870d71e488b.png",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/67272decc31f4288.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/product/p0006?sku=p0006-2",
+    "type": "Document"
+  },
+  {
+    "url": "http://localhost:3000/assets/index-D9Q907w7.js",
+    "type": "Script"
+  },
+  {
+    "url": "http://localhost:3000/assets/index-B3Ronb3D.css",
+    "type": "Stylesheet"
+  },
+  {
+    "url": "http://localhost:3000/api/v1/products/p0006",
+    "type": "Fetch"
+  },
+  {
+    "url": "http://localhost:3000/api/v1/bootstrap",
+    "type": "Fetch"
+  },
+  {
+    "url": "http://localhost:3000/favicon.ico",
+    "type": "Other"
+  },
+  {
+    "url": "http://localhost:3000/assets/p0006-pack2.svg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/d3d1addba44ba1c3.jpg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/assets/p0006-pack3.svg",
+    "type": "Image"
+  },
+  {
+    "url": "http://localhost:3000/api/v1/products?category=appliance&limit=6",
+    "type": "Fetch"
+  },
+  {
+    "url": "http://localhost:3000/api/v1/favorites",
+    "type": "Fetch"
+  }
+]

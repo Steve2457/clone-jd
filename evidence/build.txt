@@ -1,0 +1,13 @@
+
+> jd-local-mall@1.0.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1592 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.42 kB │ gzip:  0.33 kB
+dist/assets/index-B3Ronb3D.css   58.96 kB │ gzip: 12.42 kB
+dist/assets/index-D9Q907w7.js   306.56 kB │ gzip: 97.06 kB
+✓ built in 3.07s

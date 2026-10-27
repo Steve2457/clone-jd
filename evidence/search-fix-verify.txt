@@ -1,0 +1,213 @@
+
+> jd-local-mall@1.0.0 verify
+> npm run build && npm test && npm run db:check
+
+
+> jd-local-mall@1.0.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1592 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.42 kB │ gzip:  0.33 kB
+dist/assets/index-B3Ronb3D.css   58.96 kB │ gzip: 12.42 kB
+dist/assets/index-BbHuk6_G.js   306.57 kB │ gzip: 97.07 kB
+✓ built in 8.94s
+
+> jd-local-mall@1.0.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# (node:59148) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 独立金额样例：9903分减500，按最大余数分摊167/333，无运费
+ok 1 - 独立金额样例：9903分减500，按最大余数分摊167/333，无运费
+  ---
+  duration_ms: 94.0139
+  type: 'test'
+  ...
+# Subtest: 59元免基础运费按优惠后金额；包邮、区域重量向上取整
+ok 2 - 59元免基础运费按优惠后金额；包邮、区域重量向上取整
+  ---
+  duration_ms: 92.8202
+  type: 'test'
+  ...
+# Subtest: 优惠券资格：门槛、归属、店铺、品类、过期、重复领取
+ok 3 - 优惠券资格：门槛、归属、店铺、品类、过期、重复领取
+  ---
+  duration_ms: 99.5309
+  type: 'test'
+  ...
+# Subtest: 多商家拆单、取消后合并实付重新计算；订单地址为快照
+ok 4 - 多商家拆单、取消后合并实付重新计算；订单地址为快照
+  ---
+  duration_ms: 155.1741
+  type: 'test'
+  ...
+# Subtest: 下单事务保留库存并移除购物车；锁券、取消、幂等键冲突
+ok 5 - 下单事务保留库存并移除购物车；锁券、取消、幂等键冲突
+  ---
+  duration_ms: 146.5411
+  type: 'test'
+  ...
+# Subtest: 报价变化、同券跨店铺、非法商品项均无部分写入
+ok 6 - 报价变化、同券跨店铺、非法商品项均无部分写入
+  ---
+  duration_ms: 91.8499
+  type: 'test'
+  ...
+# Subtest: 最后一件库存竞争，失败请求没有半成品订单
+ok 7 - 最后一件库存竞争，失败请求没有半成品订单
+  ---
+  duration_ms: 151.3296
+  type: 'test'
+  ...
+# Subtest: 游客购物车合并，两个账号地址和购物车隔离
+ok 8 - 游客购物车合并，两个账号地址和购物车隔离
+  ---
+  duration_ms: 95.775
+  type: 'test'
+  ...
+# Subtest: 支付失败可重试，重复成功支付不生成第二笔扣款
+ok 9 - 支付失败可重试，重复成功支付不生成第二笔扣款
+  ---
+  duration_ms: 145.314
+  type: 'test'
+  ...
+# Subtest: 已支付未发货取消全额退款；已关闭支付不能假成功
+ok 10 - 已支付未发货取消全额退款；已关闭支付不能假成功
+  ---
+  duration_ms: 149.6838
+  type: 'test'
+  ...
+# Subtest: 暂停自动模拟仍处理30分钟付款超时并释放券和库存
+ok 11 - 暂停自动模拟仍处理30分钟付款超时并释放券和库存
+  ---
+  duration_ms: 141.248
+  type: 'test'
+  ...
+# Subtest: 非法状态和越权拦截：发货后取消、未送达收货、越权推进
+ok 12 - 非法状态和越权拦截：发货后取消、未送达收货、越权推进
+  ---
+  duration_ms: 162.0821
+  type: 'test'
+  ...
+# Subtest: 评价仅购买者收货后每个订单项一次，评分与记录一致
+ok 13 - 评价仅购买者收货后每个订单项一次，评分与记录一致
+  ---
+  duration_ms: 142.7896
+  type: 'test'
+  ...
+# Subtest: 三次部分退款覆盖分币余数，商品全退返券，退款不能超额
+ok 14 - 三次部分退款覆盖分币余数，商品全退返券，退款不能超额
+  ---
+  duration_ms: 246.7356
+  type: 'test'
+  ...
+# Subtest: 收货后退款不退原运费，撤销售后允许重提且不恢复库存
+ok 15 - 收货后退款不退原运费，撤销售后允许重提且不恢复库存
+  ---
+  duration_ms: 160.6029
+  type: 'test'
+  ...
+# Subtest: 7天窗口、不可退商品和未批准寄回均明确失败
+ok 16 - 7天窗口、不可退商品和未批准寄回均明确失败
+  ---
+  duration_ms: 112.3433
+  type: 'test'
+  ...
+# Subtest: 进程重启后持久任务继续；暂停不会推进发货
+ok 17 - 进程重启后持久任务继续；暂停不会推进发货
+  ---
+  duration_ms: 289.1706
+  type: 'test'
+  ...
+# Subtest: 搜索组合筛选、分页、转义通配符和金额排序
+ok 18 - 搜索组合筛选、分页、转义通配符和金额排序
+  ---
+  duration_ms: 99.1817
+  type: 'test'
+  ...
+# Subtest: 固定种子重复生成规范状态一致，校验器能发现库存破坏
+ok 19 - 固定种子重复生成规范状态一致，校验器能发现库存破坏
+  ---
+  duration_ms: 1744.8815
+  type: 'test'
+  ...
+# Subtest: CLI连续重置先备份，恢复同一规范状态并清除会话与额外任务
+ok 20 - CLI连续重置先备份，恢复同一规范状态并清除会话与额外任务
+  ---
+  duration_ms: 4002.97
+  type: 'test'
+  ...
+# Subtest: HTTP集成：Cookie轮换/合并/隔离、注册登录、越权、防跨站、并发最后库存
+ok 21 - HTTP集成：Cookie轮换/合并/隔离、注册登录、越权、防跨站、并发最后库存
+  ---
+  duration_ms: 632.8081
+  type: 'test'
+  ...
+# (node:46752) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 手机搜索只返回13款整机，短标题机型不丢失，功能提及不冒充整机
+ok 22 - 手机搜索只返回13款整机，短标题机型不丢失，功能提及不冒充整机
+  ---
+  duration_ms: 661.61
+  type: 'test'
+  ...
+# Subtest: 品牌加手机支持有无空格，型号别名召回，配件仍可独立搜索
+ok 23 - 品牌加手机支持有无空格，型号别名召回，配件仍可独立搜索
+  ---
+  duration_ms: 673.7658
+  type: 'test'
+  ...
+# Subtest: 手机筛选排序分页使用同一匹配集合，品牌选项只来自搜索结果
+ok 24 - 手机筛选排序分页使用同一匹配集合，品牌选项只来自搜索结果
+  ---
+  duration_ms: 649.0971
+  type: 'test'
+  ...
+# Subtest: 综合排序优先标题/品牌相关性，不受首页推荐位置支配
+not ok 25 - 综合排序优先标题/品牌相关性，不受首页推荐位置支配
+  ---
+  duration_ms: 630.321
+  type: 'test'
+  location: 'C:\\Users\\v-junanhu\\Desktop\\复刻网站\\tests\\search.test.ts:1:3301'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    10 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 10
+  operator: 'strictEqual'
+  stack: |-
+    <anonymous> (C:\Users\v-junanhu\Desktop\复刻网站\tests\search.test.ts:58:10)
+    withCatalog (C:\Users\v-junanhu\Desktop\复刻网站\tests\search.test.ts:10:22)
+    TestContext.<anonymous> (C:\Users\v-junanhu\Desktop\复刻网站\tests\search.test.ts:51:41)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 现有数据库原位补齐搜索索引且重启幂等，不重置交易资料
+ok 26 - 现有数据库原位补齐搜索索引且重启幂等，不重置交易资料
+  ---
+  duration_ms: 756.6693
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 25
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11965.0283

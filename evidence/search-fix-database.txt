@@ -1,0 +1,20 @@
+
+> jd-local-mall@1.0.0 db:check
+> tsx server/cli.ts check
+
+(node:55960) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "ok": true,
+  "errors": [],
+  "counts": {
+    "products": 200,
+    "skus": 600,
+    "users": 12,
+    "orders": 87,
+    "order_items": 88,
+    "reviews": 77,
+    "returns": 1,
+    "shops": 24
+  }
+}
